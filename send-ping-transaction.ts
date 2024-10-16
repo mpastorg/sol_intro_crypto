@@ -35,5 +35,5 @@ const signature = await sendAndConfirmTransaction(
     [payer],
 );
 
-console.log(`✅ Success! Transaction signature is: ${signature}`);
+console.log(`You can view your transaction on Solana Explorer at:\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`,);
 console.log(`balance of account sender ${payer.publicKey} is ${(await connection.getBalance(payer.publicKey)) / LAMPORTS_PER_SOL} SOL`);
